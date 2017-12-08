@@ -292,7 +292,7 @@ function _generateWinScreen(c) {
                     <span class="nav-element">Correct: ${c.correct}</span>
                     <span class="nav-element">Wrong: ${c.wrong}</span>
                     <input class="nav-element prev-button" role="button" type="button" value="" disabled>
-                    <input class="nav-element nav-button reset" role="button" type="submit" value="Reset?">
+                    <input class="nav-element next-button reset" role="button" type="submit" value="Reset?">
                 </nav>
             </form>
         `));
