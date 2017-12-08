@@ -74,7 +74,7 @@ function _generateAnswer(a) {
                             type="radio" 
                             name="answer-${a.ID}" 
                             id="answer-${a.ID}" 
-                            class="js-input-${a.position}"
+                            class="question js-input-${a.position}"
                             value="${a.ID}"
                             >
                     </figure>
@@ -333,9 +333,11 @@ function handleNav(c) {
     $('#main-app').on('click', '.next-button', (event) => {
         event.preventDefault();
 
+        console.log($('input.question:checked'));
+
         // update the value of the answer in the state.
         // in this version, you must always pick an answer again if you go back
-        c.playerAnswers[c.questionNum] = $('input[name="question"]:checked').val();
+        c.playerAnswers[c.questionNum] = $('input.question:checked').val();
 
         // call the update score method on the state and increment the question number
         if (c.questionNum < c.playerAnswers.length &&
