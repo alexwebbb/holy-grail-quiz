@@ -72,7 +72,7 @@ function _generateAnswer(a) {
                         </label>
                         <input 
                             type="radio" 
-                            name="answer-${a.ID}" 
+                            name="answer-set" 
                             id="answer-${a.ID}" 
                             class="question js-input-${a.position}"
                             value="${a.ID}"
@@ -333,7 +333,6 @@ function handleNav(c) {
     $('#main-app').on('click', '.next-button', (event) => {
         event.preventDefault();
 
-        console.log($('input.question:checked'));
 
         // update the value of the answer in the state.
         // in this version, you must always pick an answer again if you go back
