@@ -65,14 +65,14 @@ function _generateAnswer(a) {
                             top: ${a.offset.top}px;"
                         >
                         <label 
-                            for="question" 
+                            for="answer-${a.ID}" 
                             class="js-label-${a.position}"
                             >
                             ${a.value}
                         </label>
                         <input 
                             type="radio" 
-                            name="question" 
+                            name="answer-${a.ID}" 
                             id="answer-${a.ID}" 
                             class="js-input-${a.position}"
                             value="${a.ID}"
